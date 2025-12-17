@@ -87,8 +87,15 @@ make re
 
 ### Lancer le programme
 
+Le programme nécessite deux arguments en ligne de commande pour spécifier les fichiers de sortie :
+
 ```bash
-./analyzer.exe
+./analyzer.exe [file_brake] [file_throttle]
+```
+
+**Exemple :**
+```bash
+./analyzer.exe out/test/brake out/test/throttle
 ```
 
 Au lancement, vous aurez le choix entre deux options :
@@ -101,18 +108,20 @@ What do you want :
 
 ### Mode Enregistrement (1)
 
-1. Lancez le mode enregistrement
-2. Le programme détecte automatiquement votre manette
-3. Appuyez sur le **bouton A** pour démarrer l'enregistrement
-4. Jouez à Assetto Corsa normalement
-5. Appuyez à nouveau sur **A** pour arrêter l'enregistrement
-6. Les données sont sauvegardées dans `out/test/brake` et `out/test/throttle`
+1. Lancez le programme avec les chemins des fichiers de sortie souhaités
+2. Sélectionnez l'option 1 (Record entries)
+3. Le programme détecte automatiquement votre manette
+4. Appuyez sur le **bouton A** pour démarrer l'enregistrement
+5. Jouez à Assetto Corsa normalement
+6. Appuyez à nouveau sur **A** pour arrêter l'enregistrement
+7. Les données sont sauvegardées dans les fichiers spécifiés
 
 ### Mode Visualisation (2)
 
-1. Lancez le mode visualisation
-2. Une fenêtre SFML s'ouvre affichant vos données de télémétrie
-3. Utilisez les contrôles suivants :
+1. Lancez le programme avec les chemins des fichiers de télémétrie à visualiser
+2. Sélectionnez l'option 2 (Visualizer)
+3. Une fenêtre SFML s'ouvre affichant vos données de télémétrie
+4. Utilisez les contrôles suivants :
    - **Molette de la souris** : Scroller horizontalement
    - **Flèche Haut** : Zoomer
    - **Flèche Bas** : Dézoomer
